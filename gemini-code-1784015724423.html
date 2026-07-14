@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasan & Pourya | Pro Workout Platform</title>
+    
+    <!-- اتصال فایل مانیفست برای قابلیت نصب اپلیکیشن (PWA) -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#080a10">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/nolan/192/barbell.png">
+
+    <!-- فونت‌ها و آیکون‌ها -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;800;950&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- اتصال فایل استایل مجزا -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- هدر برنامه -->
+    <header class="app-header">
+        <div class="user-profile">
+            <div class="avatar-ring">
+                <i class="fa-solid fa-user-ninja"></i>
+            </div>
+            <div class="welcome-text">
+                <h2>خوش آمدید</h2>
+                <h1>ساسان و پوریا</h1>
+            </div>
+        </div>
+        <div class="status-badge">
+            <span></span>
+            دوره حجم فعال
+        </div>
+    </header>
+
+    <!-- تب‌های ناوبری اصلی -->
+    <div class="navigation-tabs">
+        <button class="tab-btn active" onclick="switchTab('day1', this)"><i class="fa-solid fa-1"></i> یکشنبه</button>
+        <button class="tab-btn" onclick="switchTab('day2', this)"><i class="fa-solid fa-2"></i> سه‌شنبه</button>
+        <button class="tab-btn" onclick="switchTab('day3', this)"><i class="fa-solid fa-3"></i> پنجشنبه</button>
+        <button class="tab-btn" onclick="switchTab('tips', this)"><i class="fa-solid fa-circle-info"></i> نکات علمی</button>
+        <button class="tab-btn" onclick="switchTab('motivation', this)"><i class="fa-solid fa-fire"></i> بمب انگیزه</button>
+    </div>
+
+    <!-- بخش روز اول -->
+    <div id="day1" class="tab-content active">
+        <div class="day-banner">
+            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000" alt="Leg day">
+            <div class="day-banner-info">
+                <span>تمرکز عضلانی</span>
+                <h2>روز اول: پا + سرشانه</h2>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">گرم کردن پویا</span>
+                <span class="ex-meta">۵ دقیقه هوازی + حرکات کششی</span>
+            </div>
+            <i class="fa-solid fa-heart-pulse" style="color: var(--accent-cyan); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۱) اسکات هالتر</span>
+                <span class="ex-meta">۴ ست × ۶-۸ تکرار</span>
+            </div>
+            <i class="fa-solid fa-dumbbell" style="color: var(--accent-green); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۲) لانج راه‌رفتنی با دمبل</span>
+                <span class="ex-meta">۳ ست × ۱۰-۱۲ تکرار (هر پا)</span>
+                <span class="ex-warning"><i class="fa-solid fa-circle-info"></i> جایگزینِ ددلیفت رومانیایی شده است.</span>
+            </div>
+            <i class="fa-solid fa-person-walking" style="color: var(--accent-cyan); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۳) پرس پا</span>
+                <span class="ex-meta">۳ ست × ۱۲ تکرار</span>
+            </div>
+            <i class="fa-solid fa-dumbbell" style="color: var(--text-gray); font-size: 1.3rem;"></i>
+        </div>
+
+        <!-- سوپرست‌های روز اول -->
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست A (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>جلو پا دستگاه</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>پشت پا خوابیده</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست B (۴ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>پرس سرشانه دمبل</span> <span style="color: var(--accent-green);">۱۰ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>نشر جانب دمبل</span> <span style="color: var(--accent-green);">۱۵ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست C (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>نشر خم دمبل</span> <span style="color: var(--accent-green);">۱۵ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>شراگ دمبل</span> <span style="color: var(--accent-green);">۱۵ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">تمرینات شکم</span>
+                <span class="ex-meta">کرانچ سیمکش: ۳×۱۵ | پلانک: ۳×۶۰ ثانیه</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش روز دوم -->
+    <div id="day2" class="tab-content">
+        <div class="day-banner">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000" alt="Chest day">
+            <div class="day-banner-info">
+                <span>تمرکز عضلانی</span>
+                <h2>روز دوم: سینه + جلو بازو</h2>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۱) پرس بالا سینه هالتر ⭐</span>
+                <span class="ex-meta">۴ ست × ۶-۸ تکرار</span>
+                <span class="ex-warning" style="color: var(--accent-cyan);"><i class="fa-solid fa-award"></i> اولین حرکت قرار گرفت چون بالاسینه نقطه ضعف شماست.</span>
+            </div>
+            <i class="fa-solid fa-fire" style="color: var(--accent-cyan); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۲) پرس سینه دمبل</span>
+                <span class="ex-meta">۳ ست × ۸-۱۰ تکرار</span>
+            </div>
+            <i class="fa-solid fa-dumbbell" style="color: var(--text-gray); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست A (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>کراس اور از پایین</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>قفسه دستگاه (Pec Deck)</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست B (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>جلو بازو EZ</span> <span style="color: var(--accent-green);">۱۰ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>جلو بازو چکشی</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست C (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>جلو بازو لاری دستگاه</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>جلو بازو سیمکش تک دست</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش روز سوم -->
+    <div id="day3" class="tab-content">
+        <div class="day-banner">
+            <img src="https://images.unsplash.com/photo-1603287634276-ae4d0fc38531?q=80&w=1000" alt="Back day">
+            <div class="day-banner-info">
+                <span>تمرکز عضلانی</span>
+                <h2>روز سوم: زیربغل + پشت بازو</h2>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۱) بارفیکس یا لت سیمکش</span>
+                <span class="ex-meta">۴ ست × ۸-۱۰ تکرار</span>
+            </div>
+            <i class="fa-solid fa-weight-hanging" style="color: var(--accent-cyan); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="exercise-card">
+            <div class="ex-details">
+                <span class="ex-title">۲) زیربغل تی بار (T-Bar Row)</span>
+                <span class="ex-meta">۴ ست × ۱۰ تکرار</span>
+            </div>
+            <i class="fa-solid fa-dumbbell" style="color: var(--accent-green); font-size: 1.3rem;"></i>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست A (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>قایقی سیمکش</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>لت دست جمع</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست B (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>فیس پول</span> <span style="color: var(--accent-green);">۱۵ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>پول اور سیمکش</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+
+        <div class="superset-card">
+            <div class="superset-title"><i class="fa-solid fa-bolt"></i> سوپرست C (۳ دور)</div>
+            <div class="superset-flow">
+                <div class="flow-item"><span>پشت بازو طناب</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+                <div class="flow-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="flow-item"><span>پشت بازو تک دمبل پشت سر</span> <span style="color: var(--accent-green);">۱۲ تکرار</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش نکات -->
+    <div id="tips" class="tab-content">
+        <div class="tips-list">
+            <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="tip-text">
+                    <h3>تغییرات اساسی برنامه</h3>
+                    <p>این دوره روی رفع نقص بالاسینه، بهبود تعادل پاها با لانج و افزایش پهنای لت کار می‌کند.</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                <div class="tip-text">
+                    <h3>سیستم پیشرفت حرکات اصلی</h3>
+                    <p>وقتی در حرکات مادر به تکرار ۸-۸-۸-۸ رسیدی، در جلسه بعدی بدون ترس ۲.۵ کیلوگرم به وزنه اضافه کن.</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="tip-text">
+                    <h3>زمان استراحت</h3>
+                    <p>بین ست‌های سنگین اصلی ۹۰ الی ۱۲۰ ثانیه و بین سوپرست‌ها ۶۰ الی ۹۰ ثانیه استراحت کنید.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش انگیزه -->
+    <div id="motivation" class="tab-content">
+        <div class="motivation-container">
+            <i class="fa-solid fa-quote-right quote-icon"></i>
+            <p class="quote-text" id="quote-display">امروز رو به یک شاهکار تبدیل کن.</p>
+            <button class="btn-neon-action" onclick="generateQuote()">جمله بعدی ⚡</button>
+        </div>
+    </div>
+
+    <!-- منوی پایینی برای گوشی -->
+    <nav class="mobile-nav">
+        <div class="nav-item active" id="btn-nav-day1" onclick="switchTab('day1', document.querySelectorAll('.tab-btn')[0])">
+            <i class="fa-solid fa-dumbbell"></i>
+            <span>روز اول</span>
+        </div>
+        <div class="nav-item" id="btn-nav-day2" onclick="switchTab('day2', document.querySelectorAll('.tab-btn')[1])">
+            <i class="fa-solid fa-fire"></i>
+            <span>روز دوم</span>
+        </div>
+        <div class="nav-item" id="btn-nav-day3" onclick="switchTab('day3', document.querySelectorAll('.tab-btn')[2])">
+            <i class="fa-solid fa-bolt"></i>
+            <span>روز سوم</span>
+        </div>
+    </nav>
+
+    <script>
+        // سوئیچ بین تب‌ها
+        function switchTab(tabId, btnElement) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            if(btnElement) btnElement.classList.add('active');
+
+            if(tabId === 'day1') document.getElementById('btn-nav-day1').classList.add('active');
+            if(tabId === 'day2') document.getElementById('btn-nav-day2').classList.add('active');
+            if(tabId === 'day3') document.getElementById('btn-nav-day3').classList.add('active');
+        }
+
+        const gymQuotes = [
+            "هیچ‌چیز آسان‌تر نمی‌شود، این تو هستی که قوی‌تر می‌شوی! ساسان و پوریا، امروز وقت درخشیدنه.",
+            "درد امروز، تبدیل به قدرت فردا میشه. هر تکرار حساب میشه!",
+            "برنده کسی نیست که هرگز شکست نخورده، بلکه کسی است که هرگز جا نزده.",
+            "جسم شما آنچه را به دست می‌آورد که ذهن شما باورش دارد. سنگین بزن!",
+            "۱٪ شانس، ۱٪ استعداد، و ۹۸٪ پشتکار و تداوم بدون بهانه. این تنها فرمول موفقیته.",
+            "موفقیت در باشگاه یعنی انجام کارهای تکراری و سخت، روز بعد از روز، بدون خستگی.",
+            "وقتی خسته شدی، یاد بگیر استراحت کنی، نه اینکه تسلیم بشی. فردا دوباره پرقدرت‌تر برمی‌گردیم!"
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * gymQuotes.length);
+            document.getElementById('quote-display').innerText = gymQuotes[randomIndex];
+        }
+
+        window.onload = generateQuote;
+
+        // --- فعال‌سازی Service Worker برای قابلیت آفلاین و PWA ---
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('سرویس ورکر با موفقیت فعال شد!', reg))
+                    .catch(err => console.log('خطا در ثبت سرویس ورکر:', err));
+            });
+        }
+    </script>
+</body>
+</html>
